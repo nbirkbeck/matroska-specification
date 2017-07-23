@@ -415,10 +415,10 @@
   <element name="FrameRate" path="0*1(\Segment\Tracks\TrackEntry\Video\FrameRate)" cppname="VideoFrameRate" id="0x2383E3" type="float" maxOccurs="1" minver="0" maxver="0" range="&gt; 0x0p+0">
     <documentation lang="en">Number of frames per second. <strong>Informational</strong> only.</documentation>
   </element>
-  <element name="Colour" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour)" cppname="VideoColour" id="0x55B0" type="master" maxOccurs="1" minver="4" webm="0">
+  <element name="Colour" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour)" cppname="VideoColour" id="0x55B0" type="master" maxOccurs="1" minver="4" webm="1">
     <documentation lang="en">Settings describing the colour format.</documentation>
   </element>
-  <element name="MatrixCoefficients" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MatrixCoefficients)" cppname="VideoColourMatrix" id="0x55B1" type="uinteger" maxOccurs="1" default="2" minver="4" webm="0">
+  <element name="MatrixCoefficients" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MatrixCoefficients)" cppname="VideoColourMatrix" id="0x55B1" type="uinteger" maxOccurs="1" default="2" minver="4" webm="1">
     <documentation lang="en">The Matrix Coefficients of the video used to derive luma and chroma values from red, green, and blue color primaries. For clarity, the value and meanings for MatrixCoefficients are adopted from Table 4 of ISO/IEC 23001-8:2013/DCOR1.</documentation>
     <restriction>
       <enum value="0" label="GBR"/>
@@ -434,22 +434,22 @@
       <enum value="10" label="BT2020 Constant Luminance"/>
     </restriction>
   </element>
-  <element name="BitsPerChannel" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\BitsPerChannel)" cppname="VideoBitsPerChannel" id="0x55B2" type="uinteger" maxOccurs="1" default="0" minver="4" webm="0">
+  <element name="BitsPerChannel" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\BitsPerChannel)" cppname="VideoBitsPerChannel" id="0x55B2" type="uinteger" maxOccurs="1" default="0" minver="4" webm="1">
     <documentation lang="en">Number of decoded bits per channel. A value of 0 indicates that the BitsPerChannel is unspecified.</documentation>
   </element>
-  <element name="ChromaSubsamplingHorz" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\ChromaSubsamplingHorz)" cppname="VideoChromaSubsampHorz" id="0x55B3" type="uinteger" maxOccurs="1" minver="4" webm="0">
+  <element name="ChromaSubsamplingHorz" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\ChromaSubsamplingHorz)" cppname="VideoChromaSubsampHorz" id="0x55B3" type="uinteger" maxOccurs="1" minver="4" webm="1">
     <documentation lang="en">The amount of pixels to remove in the Cr and Cb channels for every pixel not removed horizontally. Example: For video with 4:2:0 chroma subsampling, the ChromaSubsamplingHorz SHOULD be set to 1.</documentation>
   </element>
-  <element name="ChromaSubsamplingVert" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\ChromaSubsamplingVert)" cppname="VideoChromaSubsampVert" id="0x55B4" type="uinteger" maxOccurs="1" minver="4" webm="0">
+  <element name="ChromaSubsamplingVert" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\ChromaSubsamplingVert)" cppname="VideoChromaSubsampVert" id="0x55B4" type="uinteger" maxOccurs="1" minver="4" webm="1">
     <documentation lang="en">The amount of pixels to remove in the Cr and Cb channels for every pixel not removed vertically. Example: For video with 4:2:0 chroma subsampling, the ChromaSubsamplingVert SHOULD be set to 1.</documentation>
   </element>
-  <element name="CbSubsamplingHorz" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\CbSubsamplingHorz)" cppname="VideoCbSubsampHorz" id="0x55B5" type="uinteger" maxOccurs="1" minver="4" webm="0">
+  <element name="CbSubsamplingHorz" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\CbSubsamplingHorz)" cppname="VideoCbSubsampHorz" id="0x55B5" type="uinteger" maxOccurs="1" minver="4" webm="1">
     <documentation lang="en">The amount of pixels to remove in the Cb channel for every pixel not removed horizontally. This is additive with ChromaSubsamplingHorz. Example: For video with 4:2:1 chroma subsampling, the ChromaSubsamplingHorz SHOULD be set to 1 and CbSubsamplingHorz SHOULD be set to 1.</documentation>
   </element>
-  <element name="CbSubsamplingVert" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\CbSubsamplingVert)" cppname="VideoCbSubsampVert" id="0x55B6" type="uinteger" maxOccurs="1" minver="4" webm="0">
+  <element name="CbSubsamplingVert" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\CbSubsamplingVert)" cppname="VideoCbSubsampVert" id="0x55B6" type="uinteger" maxOccurs="1" minver="4" webm="1">
     <documentation lang="en">The amount of pixels to remove in the Cb channel for every pixel not removed vertically. This is additive with ChromaSubsamplingVert.</documentation>
   </element>
-  <element name="ChromaSitingHorz" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\ChromaSitingHorz)" cppname="VideoChromaSitHorz" id="0x55B7" type="uinteger" maxOccurs="1" default="0" minver="4" webm="0">
+  <element name="ChromaSitingHorz" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\ChromaSitingHorz)" cppname="VideoChromaSitHorz" id="0x55B7" type="uinteger" maxOccurs="1" default="0" minver="4" webm="1">
     <documentation lang="en">How chroma is subsampled horizontally.</documentation>
     <restriction>
       <enum value="0" label="unspecified"/>
@@ -457,7 +457,7 @@
       <enum value="2" label="half"/>
     </restriction>
   </element>
-  <element name="ChromaSitingVert" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\ChromaSitingVert)" cppname="VideoChromaSitVert" id="0x55B8" type="uinteger" maxOccurs="1" default="0" minver="4" webm="0">
+  <element name="ChromaSitingVert" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\ChromaSitingVert)" cppname="VideoChromaSitVert" id="0x55B8" type="uinteger" maxOccurs="1" default="0" minver="4" webm="1">
     <documentation lang="en">How chroma is subsampled vertically.</documentation>
     <restriction>
       <enum value="0" label="unspecified"/>
@@ -465,7 +465,7 @@
       <enum value="2" label="half"/>
     </restriction>
   </element>
-  <element name="Range" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\Range)" cppname="VideoColourRange" id="0x55B9" type="uinteger" maxOccurs="1" default="0" minver="4" webm="0">
+  <element name="Range" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\Range)" cppname="VideoColourRange" id="0x55B9" type="uinteger" maxOccurs="1" default="0" minver="4" webm="1">
     <documentation lang="en">Clipping of the color ranges.</documentation>
     <restriction>
       <enum value="0" label="unspecified"/>
@@ -474,7 +474,7 @@
       <enum value="3" label="defined by MatrixCoefficients/TransferCharacteristics"/>
     </restriction>
   </element>
-  <element name="TransferCharacteristics" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\TransferCharacteristics)" cppname="VideoColourTransferCharacter" id="0x55BA" type="uinteger" maxOccurs="1" default="2" minver="4" webm="0">
+  <element name="TransferCharacteristics" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\TransferCharacteristics)" cppname="VideoColourTransferCharacter" id="0x55BA" type="uinteger" maxOccurs="1" default="2" minver="4" webm="1">
     <documentation lang="en">The transfer characteristics of the video. For clarity, the value and meanings for TransferCharacteristics 1-15 are adopted from Table 3 of ISO/IEC 23001-8:2013/DCOR1. TransferCharacteristics 16-18 are proposed values.</documentation>
     <restriction>
       <enum value="0" label="reserved"/>
@@ -498,7 +498,7 @@
       <enum value="18" label="ARIB STD-B67 (HLG)"/>
     </restriction>
   </element>
-  <element name="Primaries" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\Primaries)" cppname="VideoColourPrimaries" id="0x55BB" type="uinteger" maxOccurs="1" default="2" minver="4" webm="0">
+  <element name="Primaries" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\Primaries)" cppname="VideoColourPrimaries" id="0x55BB" type="uinteger" maxOccurs="1" default="2" minver="4" webm="1">
     <documentation lang="en">The colour primaries of the video. For clarity, the value and meanings for Primaries are adopted from Table 2 of ISO/IEC 23001-8:2013/DCOR1.</documentation>
     <restriction>
       <enum value="0" label="reserved"/>
@@ -515,43 +515,43 @@
       <enum value="22" label="JEDEC P22 phosphors"/>
     </restriction>
   </element>
-  <element name="MaxCLL" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MaxCLL)" cppname="VideoColourMaxCLL" id="0x55BC" type="uinteger" maxOccurs="1" minver="4" webm="0">
+  <element name="MaxCLL" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MaxCLL)" cppname="VideoColourMaxCLL" id="0x55BC" type="uinteger" maxOccurs="1" minver="4" webm="1">
     <documentation lang="en">Maximum brightness of a single pixel (Maximum Content Light Level) in candelas per square meter (cd/m²).</documentation>
   </element>
-  <element name="MaxFALL" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MaxFALL)" cppname="VideoColourMaxFALL" id="0x55BD" type="uinteger" maxOccurs="1" minver="4" webm="0">
+  <element name="MaxFALL" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MaxFALL)" cppname="VideoColourMaxFALL" id="0x55BD" type="uinteger" maxOccurs="1" minver="4" webm="1">
     <documentation lang="en">Maximum brightness of a single full frame (Maximum Frame-Average Light Level) in candelas per square meter (cd/m²).</documentation>
   </element>
-  <element name="MasteringMetadata" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata)" cppname="VideoColourMasterMeta" id="0x55D0" type="master" maxOccurs="1" minver="4" webm="0">
+  <element name="MasteringMetadata" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata)" cppname="VideoColourMasterMeta" id="0x55D0" type="master" maxOccurs="1" minver="4" webm="1">
     <documentation lang="en">SMPTE 2086 mastering data.</documentation>
   </element>
-  <element name="PrimaryRChromaticityX" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryRChromaticityX)" cppname="VideoRChromaX" id="0x55D1" type="float" maxOccurs="1" range="0-1" minver="4" webm="0">
+  <element name="PrimaryRChromaticityX" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryRChromaticityX)" cppname="VideoRChromaX" id="0x55D1" type="float" maxOccurs="1" range="0-1" minver="4" webm="1">
     <documentation lang="en">Red X chromaticity coordinate as defined by CIE 1931.</documentation>
   </element>
-  <element name="PrimaryRChromaticityY" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryRChromaticityY)" cppname="VideoRChromaY" id="0x55D2" type="float" maxOccurs="1" range="0-1" minver="4" webm="0">
+  <element name="PrimaryRChromaticityY" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryRChromaticityY)" cppname="VideoRChromaY" id="0x55D2" type="float" maxOccurs="1" range="0-1" minver="4" webm="1">
     <documentation lang="en">Red Y chromaticity coordinate as defined by CIE 1931.</documentation>
   </element>
-  <element name="PrimaryGChromaticityX" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryGChromaticityX)" cppname="VideoGChromaX" id="0x55D3" type="float" maxOccurs="1" range="0-1" minver="4" webm="0">
+  <element name="PrimaryGChromaticityX" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryGChromaticityX)" cppname="VideoGChromaX" id="0x55D3" type="float" maxOccurs="1" range="0-1" minver="4" webm="1">
     <documentation lang="en">Green X chromaticity coordinate as defined by CIE 1931.</documentation>
   </element>
-  <element name="PrimaryGChromaticityY" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryGChromaticityY)" cppname="VideoGChromaY" id="0x55D4" type="float" maxOccurs="1" range="0-1" minver="4" webm="0">
+  <element name="PrimaryGChromaticityY" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryGChromaticityY)" cppname="VideoGChromaY" id="0x55D4" type="float" maxOccurs="1" range="0-1" minver="4" webm="1">
     <documentation lang="en">Green Y chromaticity coordinate as defined by CIE 1931.</documentation>
   </element>
-  <element name="PrimaryBChromaticityX" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryBChromaticityX)" cppname="VideoBChromaX" id="0x55D5" type="float" maxOccurs="1" range="0-1" minver="4" webm="0">
+  <element name="PrimaryBChromaticityX" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryBChromaticityX)" cppname="VideoBChromaX" id="0x55D5" type="float" maxOccurs="1" range="0-1" minver="4" webm="1">
     <documentation lang="en">Blue X chromaticity coordinate as defined by CIE 1931.</documentation>
   </element>
-  <element name="PrimaryBChromaticityY" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryBChromaticityY)" cppname="VideoBChromaY" id="0x55D6" type="float" maxOccurs="1" range="0-1" minver="4" webm="0">
+  <element name="PrimaryBChromaticityY" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\PrimaryBChromaticityY)" cppname="VideoBChromaY" id="0x55D6" type="float" maxOccurs="1" range="0-1" minver="4" webm="1">
     <documentation lang="en">Blue Y chromaticity coordinate as defined by CIE 1931.</documentation>
   </element>
-  <element name="WhitePointChromaticityX" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\WhitePointChromaticityX)" cppname="VideoWhitePointChromaX" id="0x55D7" type="float" maxOccurs="1" range="0-1" minver="4" webm="0">
+  <element name="WhitePointChromaticityX" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\WhitePointChromaticityX)" cppname="VideoWhitePointChromaX" id="0x55D7" type="float" maxOccurs="1" range="0-1" minver="4" webm="1">
     <documentation lang="en">White X chromaticity coordinate as defined by CIE 1931.</documentation>
   </element>
-  <element name="WhitePointChromaticityY" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\WhitePointChromaticityY)" cppname="VideoWhitePointChromaY" id="0x55D8" type="float" maxOccurs="1" range="0-1" minver="4" webm="0">
+  <element name="WhitePointChromaticityY" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\WhitePointChromaticityY)" cppname="VideoWhitePointChromaY" id="0x55D8" type="float" maxOccurs="1" range="0-1" minver="4" webm="1">
     <documentation lang="en">White Y chromaticity coordinate as defined by CIE 1931.</documentation>
   </element>
-  <element name="LuminanceMax" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\LuminanceMax)" cppname="VideoLuminanceMax" id="0x55D9" type="float" maxOccurs="1" range="&gt;= 0x0p+0" minver="4" webm="0">
+  <element name="LuminanceMax" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\LuminanceMax)" cppname="VideoLuminanceMax" id="0x55D9" type="float" maxOccurs="1" range="&gt;= 0x0p+0" minver="4" webm="1">
     <documentation lang="en">Maximum luminance. Represented in candelas per square meter (cd/m²).</documentation>
   </element>
-  <element name="LuminanceMin" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\LuminanceMin)" cppname="VideoLuminanceMin" id="0x55DA" type="float" maxOccurs="1" range="&gt;= 0x0p+0" minver="4" webm="0">
+  <element name="LuminanceMin" path="0*1(\Segment\Tracks\TrackEntry\Video\Colour\MasteringMetadata\LuminanceMin)" cppname="VideoLuminanceMin" id="0x55DA" type="float" maxOccurs="1" range="&gt;= 0x0p+0" minver="4" webm="1">
     <documentation lang="en">Mininum luminance. Represented in candelas per square meter (cd/m²).</documentation>
   </element>
   <element name="Projection" path="0*1(\Segment\Tracks\TrackEntry\Video\Projection)" id="0x7670" type="master" cppname="VideoProjection" maxOccurs="1" minver="4" webm="1">
